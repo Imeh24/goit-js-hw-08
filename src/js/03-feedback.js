@@ -19,10 +19,11 @@ form.addEventListener('input', () => {
 const storedData = localStorage.getItem(localKey);
 const { email = '', message = '' } = storedData ? JSON.parse(storedData) : {};
 
-form.message.value = message;
-form.message.placeholder = 'Write your feedback';
+
 form.email.value = email;
 form.email.placeholder = 'Valid email address';
+form.message.value = message;
+form.message.placeholder = 'Write your feedback';
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
